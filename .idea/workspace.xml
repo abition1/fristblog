@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="545f13b6-4fe8-4c3f-8600-b2134c8c2719" name="Default Changelist" comment="" />
+    <list default="true" id="545f13b6-4fe8-4c3f-8600-b2134c8c2719" name="Default Changelist" comment="frist commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +21,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\blog\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -30,6 +39,7 @@
     <option name="delegateBuildToMaven" value="true" />
   </component>
   <component name="ProjectId" id="28dJxs92zkO0rN5VBUvp5nnceZd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -98,12 +108,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651540778836</updated>
-      <workItem from="1651540781679" duration="22376000" />
+      <workItem from="1651540781679" duration="23332000" />
     </task>
+    <task id="LOCAL-00001" summary="frist commit">
+      <created>1651575116894</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1651575116894</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="frist commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="frist commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="67" key="#Assign_Data_Sources" timestamp="1651560183343">
@@ -118,6 +140,10 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1651567742187" />
+    <state x="389" y="0" key="CommitChangelistDialog2" timestamp="1651575375948">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="389" y="0" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1651575375948" />
     <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1651574668189">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -158,10 +184,14 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1493" height="11" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1651569674219" />
-    <state x="250" y="54" key="SettingsEditor" timestamp="1651574462296">
+    <state x="250" y="54" key="SettingsEditor" timestamp="1651575429560">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="250" y="54" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1651574462296" />
+    <state x="250" y="54" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1651575429560" />
+    <state x="622" y="128" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1651574877728">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="622" y="128" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.816@0.0.1536.816" timestamp="1651574877728" />
     <state x="104" y="89" key="new project wizard" timestamp="1651544600783">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
