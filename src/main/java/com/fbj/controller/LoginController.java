@@ -9,7 +9,7 @@ public class LoginController {
 @RequestMapping("/dd")
 public String  Login(){
 
-    return "";
+    return "error";
 
 }
 }

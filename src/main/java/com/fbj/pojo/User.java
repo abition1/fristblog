@@ -24,10 +24,11 @@ public class User {
     private String email;
     private String avatar;
     private Integer type;
+    private  String perms;
     @Temporal(TemporalType.TIMESTAMP)  //具体的时间显示
     private Date createTime;
     @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
-    @OneToMany(mappedBy = "user")
-    private List<Blog> blogs=new ArrayList<>();
+    @OneToMany(mappedBy="user",fetch=FetchType.EAGER)
+    private List<Blog> blog=new ArrayList<>();
 }

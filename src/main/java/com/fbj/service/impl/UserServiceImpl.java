@@ -5,6 +5,7 @@ import com.fbj.pojo.User;
 import com.fbj.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import until.MD5Utils;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -12,8 +13,10 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserDao userDao;
 
+
+
     @Override
-    public User findByUsernameAndPassword(String username, String password) {
-        return userDao.findByUsernameAndPassword(username,password);
+    public User findByUsername(String username) {
+        return userDao.findByUsername(username);
     }
 }

@@ -23,7 +23,7 @@
              管理后台登录
            </div>
          </h2>
-         <form class="ui large form" method="post" action="#" th:action="@{/tologin}">
+         <form class="ui large form" method="post"  th:action="@{/tologin}">
            <div class="ui  segment">
              <div class="field">
                <div class="ui left icon input">
@@ -41,7 +41,7 @@
            </div>
 
            <div class="ui error mini message"></div>
-           <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${error}">用户名和密码错误</div>
+           <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">用户名和密码错误</div>
 
          </form>
 
