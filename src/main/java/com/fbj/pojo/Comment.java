@@ -34,4 +34,6 @@ public class Comment {
     private List<Comment> comments=new ArrayList<>();
     @ManyToOne
     private Comment ParentComment;
+
+
 }
