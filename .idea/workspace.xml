@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4ab86b9a-969b-40da-b733-146601423957" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="28h4diXAT7ajO5KvAR4VSc7q7cm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration name="BlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="blog" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fbj.BlogApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="67" key="#Project_Structure" timestamp="1651655688479">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="361" y="67" key="#Project_Structure/0.0.1536.816@0.0.1536.816" timestamp="1651655688479" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1651655722430">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.816@0.0.1536.816" timestamp="1651655722430" />
+  </component>
+</project>
