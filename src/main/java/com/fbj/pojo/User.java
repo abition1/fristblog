@@ -31,4 +31,5 @@ public class User {
     private Date updateTime;
     @OneToMany(mappedBy="user",fetch=FetchType.EAGER)
     private List<Blog> blog=new ArrayList<>();
+
 }
