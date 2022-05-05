@@ -1,31 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ab86b9a-969b-40da-b733-146601423957" name="Default Changelist" comment="" />
+    <list default="true" id="4ab86b9a-969b-40da-b733-146601423957" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fbj/controller/admin/TypeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fbj/dao/TypeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fbj/service/TypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fbj/service/impl/TypeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/addtype.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/type.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/types.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/updatetype.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/blog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fbj/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fbj/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fbj/BlogApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fbj/BlogApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fbj/config/ShiroConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fbj/config/ShiroConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fbj/config/UserRealm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fbj/config/UserRealm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fbj/controller/admin/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fbj/controller/admin/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fbj/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fbj/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fbj/pojo/Blog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fbj/pojo/Blog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fbj/pojo/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fbj/pojo/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fbj/pojo/Tag.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fbj/pojo/Tag.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fbj/pojo/Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fbj/pojo/Type.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fbj/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fbj/pojo/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fbj/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fbj/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fbj/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fbj/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/error/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/error/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/until/MD5Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/until/MD5Utils.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--tags" />
-        <option name="title" value="All" />
-      </GitPushTagMode>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
     </option>
+  </component>
+  <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="28h4diXAT7ajO5KvAR4VSc7q7cm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/admin" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\blog\src\main\resources\templates\admin" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="BlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -52,17 +103,52 @@
     <configuration />
   </component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="first">
+      <created>1651656832465</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1651656832465</updated>
+    </task>
+    <task id="LOCAL-00002" summary="first">
+      <created>1651656942431</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651656942431</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4ab86b9a-969b-40da-b733-146601423957" name="Default Changelist" comment="" />
+      <created>1651709981419</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651709981419</updated>
+      <workItem from="1651709983521" duration="628000" />
+      <workItem from="1651710626789" duration="12143000" />
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first" />
+    <option name="LAST_COMMIT_MESSAGE" value="first" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="67" key="#Project_Structure" timestamp="1651655688479">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="361" y="67" key="#Project_Structure/0.0.1536.816@0.0.1536.816" timestamp="1651655688479" />
-    <state x="372" y="2" key="CommitChangelistDialog2" timestamp="1651656912003">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1651712574342">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="372" y="2" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1651656912003" />
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1651712574342" />
+    <state x="372" y="2" key="CommitChangelistDialog2" timestamp="1651656941531">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="372" y="2" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1651656941531" />
     <state x="147" y="64" key="DiffContextDialog" timestamp="1651656926206">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -71,9 +157,49 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="549" y="149" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1651656748801" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1651656927486">
+    <state width="1493" height="337" key="GridCell.Tab.0.bottom" timestamp="1651722846327">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.816@0.0.1536.816" timestamp="1651656927486" />
+    <state width="1493" height="337" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1651722846327" />
+    <state width="1493" height="337" key="GridCell.Tab.0.center" timestamp="1651722846327">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="337" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1651722846327" />
+    <state width="1493" height="337" key="GridCell.Tab.0.left" timestamp="1651722846327">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="337" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1651722846327" />
+    <state width="1493" height="337" key="GridCell.Tab.0.right" timestamp="1651722846327">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="337" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1651722846327" />
+    <state width="1493" height="337" key="GridCell.Tab.1.bottom" timestamp="1651722846327">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="337" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1651722846327" />
+    <state width="1493" height="337" key="GridCell.Tab.1.center" timestamp="1651722846327">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="337" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1651722846327" />
+    <state width="1493" height="337" key="GridCell.Tab.1.left" timestamp="1651722846327">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="337" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1651722846327" />
+    <state width="1493" height="337" key="GridCell.Tab.1.right" timestamp="1651722846327">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="337" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1651722846327" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1651657176641">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.816@0.0.1536.816" timestamp="1651657176641" />
+    <state x="562" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1651658020834">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="562" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.816@0.0.1536.816" timestamp="1651658020834" />
+    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1651714256825">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup/0.0.1536.816@0.0.1536.816" timestamp="1651714256825" />
   </component>
 </project>

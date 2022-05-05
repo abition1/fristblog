@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>博客管理</title>
+  <title>分类管理</title>
   <link href="../static/images/favicon.ico" th:href="@{/images/me.jpg}" rel="icon" type="image/x-ico">
-  <link rel="stylesheet"  href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
   <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
 </head>
 <body>
@@ -17,18 +17,18 @@
     <div class="ui inverted secondary stackable menu">
       <h2 class="ui olive header item" style="font-family: STSong">管理后台</h2>
       <a href="#" th:href="@{/admin/blogs}" class="m-item item m-mobile-hide"><i class="home icon"></i>文章管理</a>
-      <a href="#" th:href="@{/types}" class="m-item item m-mobile-hide"><i class="clone outline icon"></i>分类管理</a>
+      <a href="#" th:href="@{/types}" class="active m-item item m-mobile-hide"><i class="clone outline icon"></i>分类管理</a>
       <a href="#" th:href="@{/admin/friendlinks}" class="m-item item m-mobile-hide"><i class="pencil alternate icon"></i>友链管理</a>
       <a href="#" th:href="@{/admin/pictures}" class=" m-item item m-mobile-hide"><i class="image icon"></i>相册管理</a>
       <div class="right m-item m-mobile-hide menu">
         <div class="ui dropdown  item">
           <div class="text">
-            <img class="ui avatar image" src="/static/images/me.jpg"  >
-            <span th:text="${session.user.getUsername()}"></span>
+            <img class="ui avatar image" src="/static/images/me.jpg" ><!--th:src="@{${session.user.avatar}}"-->
+            <span th:text="${session.user.getUsername()}">ddd</span>
           </div>
           <i class="dropdown icon"></i>
           <div class="menu">
-            <a  th:href="@{/logout}" class="item">注销</a>
+            <a href="#" th:href="@{/logout}" class="item">注销</a>
           </div>
         </div>
       </div>
@@ -39,21 +39,85 @@
   </a>
 </nav>
 
-<br>
-<br>
-<br>
-
-  <!--中间内容-->
-  <div  class="m-padded-tb-massivex">
+  <div class="m-padded-tb-hugex">
+  <div class="ui attached pointing menu">
     <div class="ui container">
-      <div class="ui success large  message">
-        <p align="center">念念不忘，必有回响</p>
+      <div class="right menu">
+        <a href="#" th:href="@{/admin/types/input}" class="item">新增</a>
+        <a href="#" th:href="@{/admin/types}" class="teal active item">列表</a>
       </div>
+    </div>
+  </div>
+  </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <!--中间内容-->
+  <div  class="m-padded-tb-big">
+    <div class="ui container">
+      <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+        <i class="close icon"></i>
+        <div class="" th:text="|提示： ${message}">提示：操作成功！</div>
+      </div>
+      <table class="ui compact teal table">
+        <thead>
+          <tr align="center">
+            <th>ID</th>
+            <th>名称</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr align="center" th:each="type,iterStat : ${pages}">    <!--iterStat是thymelef官方自带的索引-->
+            <td th:text="${iterStat.count}">1</td>
+            <td th:text="${type.name}">我的故事</td>
+            <td>
+              <a href="#" th:href="@{/gettype/}+${type.id}" class="ui mini teal basic button">编辑</a>
+              <a href="#" th:href="@{/delete/}+${type.id}"  onclick="return confirm('确定要删除该分类吗？三思啊! 删了可就没了！')" class="ui mini red basic button">删除</a>
+            </td>
+          </tr>
+        </tbody>
+        <a href="#" th:href="@{/addtype}">
+          <button type="button" class="ui teal button m-mobile-wide m-margin-top"><i class="pencil icon"></i>新增</button>
+        </a>
+      <!--  <tfoot>
+          <tr>
+            <th colspan="6" >
+              <div class="ui inverted divided stackable grid">
+                <div class="three wide column" align="center">
+                  <a class="item" th:href="@{/admin/types(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}" th:unless="${pageInfo.isFirstPage}">上一页</a>
+                </div>
 
-      <img src="/static/images/backimg.jpg" th:src="@{/images/backimg.jpg}" alt="" class="ui rounded bordered fluid image">
+                <div class="ten wide column" align="center">
+                  <p>第 <span th:text="${pageInfo.pageNum}"></span> 页，共 <span th:text="${pageInfo.pages}"></span> 页，有 <span th:text="${pageInfo.total}"></span> 个分类</p>
+                </div>
+
+                <div class="three wide column" align="center">
+                  <a class="item" th:href="@{/admin/types(pageNum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}" th:unless="${pageInfo.isLastPage}">下一页</a>
+                </div>
+              </div>
+              <div align="center">
+              <a href="#" th:href="@{/admin/types/input}">
+                <button type="button" class="ui teal button m-mobile-wide m-margin-top"><i class="pencil icon"></i>新增</button>
+              </a>
+              </div>
+            </th>
+          </tr>
+        </tfoot>-->
+      </table>
     </div>
   </div>
 
+  <br>
+  <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
   <!--底部栏-->
 <footer class="ui inverted vertical segment m-padded-tb-massive m-opacity">
   <!--容器-->
@@ -128,7 +192,6 @@
 
       // $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");
 
-
       $('#blog-message').load(/*[[@{/footer/blogmessage}]]*/"/footer/blogmessage");
       // 运行时间统计
       function secondToDate(second) {
@@ -176,6 +239,14 @@
     $('.ui.dropdown').dropdown({
       on : 'hover'
     });
+
+    //消息提示关闭初始化
+    $('.message .close')
+      .on('click', function () {
+        $(this)
+          .closest('.message')
+          .transition('fade');
+      });
 
   </script>
 </body>
