@@ -6,7 +6,7 @@ import org.springframework.data.domain.Pageable;
 
 public interface TypeService  {
 
-Type  saveType(Type type);
+Type  saveType(Type type);//添加分类
 
 Type  getType(long id);  //通过id来获得它的类型
 

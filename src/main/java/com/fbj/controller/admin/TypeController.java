@@ -36,6 +36,7 @@ public class TypeController {
 
 @GetMapping("/addtype")
     public String  addtype(){
+
     return "admin/addtype";
     }
 

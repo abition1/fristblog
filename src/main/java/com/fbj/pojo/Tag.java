@@ -7,7 +7,10 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * 标签实体类
+ *
+**/
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,6 +21,6 @@ public class Tag {
     @GeneratedValue
     private Long id;
     private String name;
-@ManyToMany(mappedBy = "tags")  //多对多的关系映射
+    @ManyToMany(mappedBy = "tags")  //多对多的关系映射
     private List<Blog>  blogs=new ArrayList<>();
 }
