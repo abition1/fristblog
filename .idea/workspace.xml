@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ab86b9a-969b-40da-b733-146601423957" name="Default Changelist" comment="">
+    <list default="true" id="4ab86b9a-969b-40da-b733-146601423957" name="Default Changelist" comment="对后台管理又进一步完善，并且实现了阿里云的接口数据传输，以备后面所需。">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fbj/service/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fbj/service/TagService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -15,7 +15,7 @@
     <session id="-285948598">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
@@ -47,16 +47,16 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="526" />
-          <entry key="java" value="1166" />
-          <entry key="txt" value="130" />
+          <entry key="java" value="1168" />
+          <entry key="txt" value="132" />
           <entry key="yml" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="526" />
-          <entry key="JAVA" value="1166" />
-          <entry key="PLAIN_TEXT" value="130" />
+          <entry key="JAVA" value="1168" />
+          <entry key="PLAIN_TEXT" value="132" />
           <entry key="YAML" value="16" />
         </counts>
       </usages-collector>
@@ -85,8 +85,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fbj/service/TagService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+            <state relative-caret-position="405">
+              <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -183,10 +183,10 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Lenovo" />
         <option value="Lenovo &lt;2495671505@qq.com&gt;" />
         <option value="xtq" />
         <option value="admin123xtq" />
-        <option value="Lenovo" />
         <option value="徐天琪" />
       </list>
     </option>
@@ -406,7 +406,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1652080127185" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1652105416509" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -734,7 +734,7 @@
       <workItem from="1651749309651" duration="6264000" />
       <workItem from="1652055911937" duration="11773000" />
       <workItem from="1652079522030" duration="600000" />
-      <workItem from="1652104186488" duration="800000" />
+      <workItem from="1652104186488" duration="1240000" />
     </task>
     <task id="LOCAL-00001" summary="修改了error.html">
       <created>1651657749924</created>
@@ -771,17 +771,31 @@
       <option name="project" value="LOCAL" />
       <updated>1652104951449</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="对后台管理又进一步完善，并且实现了阿里云的接口数据传输，以备后面所需。">
+      <created>1652105011949</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1652105011949</updated>
+    </task>
+    <task id="LOCAL-00007" summary="对后台管理又进一步完善，并且实现了阿里云的接口数据传输，以备后面所需。">
+      <created>1652105066307</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1652105066307</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32646000" />
+    <option name="totallyTimeSpent" value="33086000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23257373" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23257373" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -1136,8 +1150,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fbj/service/TagService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        <state relative-caret-position="405">
+          <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
