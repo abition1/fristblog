@@ -16,6 +16,6 @@ public interface TagService {
     void  deleteTag(long id);
     //更改
     Tag  updateType(Tag tag); //更新
-    //
+    //id
     Tag  getType(long id);  //通过id来获得它的内容
 }

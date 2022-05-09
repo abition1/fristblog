@@ -1,56 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ab86b9a-969b-40da-b733-146601423957" name="Default Changelist" comment="对管理员后台的通过标签管理完善！！！">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/css/layui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/css/layui.mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/css/modules/code.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/css/modules/layer/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/css/modules/layer/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/font/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/font/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/font/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/font/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/font/iconfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/lay/modules/carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/lay/modules/code.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/lay/modules/colorpicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/lay/modules/element.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/lay/modules/flow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/lay/modules/form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/lay/modules/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/lay/modules/laydate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/lay/modules/layedit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/lay/modules/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/lay/modules/laypage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/lay/modules/laytpl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/lay/modules/mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/lay/modules/rate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/lay/modules/slider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/lay/modules/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/lay/modules/transfer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/lay/modules/tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/lay/modules/upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/lay/modules/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/layui.all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/layui-v2.6.8/layui/layui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/12a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/Tag/AddTag.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fbj/controller/admin/TagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fbj/controller/admin/TagController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fbj/service/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fbj/service/TagService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fbj/service/impl/TagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fbj/service/impl/TagServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/Tag/TagList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/Tag/TagList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/Tag/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/Tag/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="4ab86b9a-969b-40da-b733-146601423957" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +46,7 @@
         <counts>
           <entry key="html" value="526" />
           <entry key="java" value="1163" />
-          <entry key="txt" value="90" />
+          <entry key="txt" value="126" />
           <entry key="yml" value="16" />
         </counts>
       </usages-collector>
@@ -103,7 +54,7 @@
         <counts>
           <entry key="HTML" value="526" />
           <entry key="JAVA" value="1163" />
-          <entry key="PLAIN_TEXT" value="90" />
+          <entry key="PLAIN_TEXT" value="126" />
           <entry key="YAML" value="16" />
         </counts>
       </usages-collector>
@@ -780,7 +731,7 @@
       <workItem from="1651749309651" duration="6264000" />
       <workItem from="1652055911937" duration="11773000" />
       <workItem from="1652079522030" duration="600000" />
-      <workItem from="1652104186488" duration="244000" />
+      <workItem from="1652104186488" duration="549000" />
     </task>
     <task id="LOCAL-00001" summary="修改了error.html">
       <created>1651657749924</created>
@@ -803,11 +754,18 @@
       <option name="project" value="LOCAL" />
       <updated>1651754398491</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="对后台管理又进一步完善，并且实现了阿里云的接口数据传输，以备后面所需。">
+      <created>1652104594071</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1652104594072</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32090000" />
+    <option name="totallyTimeSpent" value="32395000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -857,7 +815,8 @@
     <MESSAGE value="修改了error.html" />
     <MESSAGE value="对管理员后台的通过标签管理博客文章的功能块进行了完善！！！" />
     <MESSAGE value="对管理员后台的通过标签管理完善！！！" />
-    <option name="LAST_COMMIT_MESSAGE" value="对管理员后台的通过标签管理完善！！！" />
+    <MESSAGE value="对后台管理又进一步完善，并且实现了阿里云的接口数据传输，以备后面所需。" />
+    <option name="LAST_COMMIT_MESSAGE" value="对后台管理又进一步完善，并且实现了阿里云的接口数据传输，以备后面所需。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="67" key="#Project_Structure" timestamp="1651655688479">
@@ -1077,6 +1036,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1825">
           <caret line="73" selection-start-line="73" selection-end-line="73" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#a#0;n#table#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
