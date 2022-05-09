@@ -16,7 +16,7 @@
   <div class="ui container">
     <div class="ui inverted secondary stackable menu">
       <h2 class="ui olive header item" style="font-family: STSong">管理后台</h2>
-      <a href="#" th:href="@{/admin/blogs}" class="m-item item m-mobile-hide"><i class="home icon"></i>文章管理</a>
+      <a href="#" th:href="@{/blogs}" class="m-item item m-mobile-hide"><i class="home icon"></i>文章管理</a>
       <a href="#" th:href="@{/types}" class="active m-item item m-mobile-hide"><i class="clone outline icon"></i>分类管理</a>
       <a href="#" th:href="@{/admin/friendlinks}" class="m-item item m-mobile-hide"><i class="pencil alternate icon"></i>友链管理</a>
       <a href="#" th:href="@{/admin/pictures}" class=" m-item item m-mobile-hide"><i class="image icon"></i>相册管理</a>
@@ -78,34 +78,40 @@
               <a href="#" th:href="@{/delete/}+${type.id}"  onclick="return confirm('确定要删除该分类吗？三思啊! 删了可就没了！')" class="ui mini red basic button">删除</a>
             </td>
           </tr>
-        </tbody>
-        <a href="#" th:href="@{/addtype}">
-          <button type="button" class="ui teal button m-mobile-wide m-margin-top"><i class="pencil icon"></i>新增</button>
-        </a>
-      <!--  <tfoot>
           <tr>
-            <th colspan="6" >
+            <th colspan="7">
               <div class="ui inverted divided stackable grid">
                 <div class="three wide column" align="center">
-                  <a class="item" th:href="@{/admin/types(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}" th:unless="${pageInfo.isFirstPage}">上一页</a>
+                  <a class="item" th:href="@{/types(page=${pages.number}-1)}">上一页</a>
                 </div>
-
-                <div class="ten wide column" align="center">
-                  <p>第 <span th:text="${pageInfo.pageNum}"></span> 页，共 <span th:text="${pageInfo.pages}"></span> 页，有 <span th:text="${pageInfo.total}"></span> 个分类</p>
-                </div>
-
                 <div class="three wide column" align="center">
-                  <a class="item" th:href="@{/admin/types(pageNum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}" th:unless="${pageInfo.isLastPage}">下一页</a>
+                  <a class="item" th:href="@{/types(page=${pages.number}+1)}" >下一页</a>
                 </div>
               </div>
               <div align="center">
-              <a href="#" th:href="@{/admin/types/input}">
-                <button type="button" class="ui teal button m-mobile-wide m-margin-top"><i class="pencil icon"></i>新增</button>
-              </a>
+                <a href="#" th:href="@{/addtype}">
+                  <button type="button" class="ui teal button m-mobile-wide m-margin-top"><i class="pencil icon"></i>新增</button>
+                </a>
+              </div>
+            </th>
+          </tr>
+        </tbody>
+<!--        <a href="#" th:href="@{/addtype}">-->
+<!--          <button type="button" class="ui teal button m-mobile-wide m-margin-top" ><i class="pencil icon">新增</i></button>-->
+<!--        </a>-->
+     <!--  <tfoot>
+          <tr>
+            <th colspan="6" >
+              <div class="ui page-information menu">
+                  <a class="item" th:href="@{/types(page=${pages.number}-1)}" >上一页</a>
+                  <a class="item" th:href="@{/types(page=${pages.number}+1)}" >下一页</a>
               </div>
             </th>
           </tr>
         </tfoot>-->
+
+
+
       </table>
     </div>
   </div>

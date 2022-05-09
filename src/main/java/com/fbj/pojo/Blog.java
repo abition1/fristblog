@@ -39,6 +39,6 @@ public class Blog {
     private List<Tag> tags=new ArrayList<>();
     @ManyToOne
     private User user;
-    @OneToMany(mappedBy = "blog")
+    @OneToMany(mappedBy = "blog",fetch=FetchType.EAGER)
     private List<Comment> comments=new ArrayList<>();
 }

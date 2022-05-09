@@ -22,7 +22,7 @@ public class TypeController {
 
 @RequestMapping("/types")
 //通过@PageableDeafault来对分页数据的控制
-    public String  Pagelist(@PageableDefault(size = 10,sort = "id",direction = Sort.Direction.DESC) Pageable pageable, Model model){
+    public String  Pagelist(@PageableDefault(size = 5,sort = "id",direction = Sort.Direction.DESC) Pageable pageable, Model model){
        model.addAttribute("pages",typeService.listType(pageable));
       return  "admin/types" ;
 
@@ -57,5 +57,7 @@ public  String  addtypes(Type type){
      typeService.saveType(type);
 return "redirect:/types";
    }
+
+
 
 }

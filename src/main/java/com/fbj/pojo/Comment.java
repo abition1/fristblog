@@ -30,7 +30,7 @@ public class Comment {
     private Blog blog;
 
     //开启多级评论的功能
-    @OneToMany(mappedBy = "ParentComment")
+    @OneToMany(mappedBy = "ParentComment",fetch=FetchType.EAGER)
     private List<Comment> comments=new ArrayList<>();
     @ManyToOne
     private Comment ParentComment;
