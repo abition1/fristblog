@@ -17,9 +17,9 @@
         <div class="ui inverted secondary stackable menu">
             <h2 class="ui olive header item" style="font-family: STSong">管理后台</h2>
             <a href="#" th:href="@{/admin/blogs}" class="m-item item m-mobile-hide"><i class="home icon"></i>文章管理</a>
-            <a href="#" th:href="@{/admin/types}" class="active m-item item m-mobile-hide"><i class="clone outline icon"></i>分类管理</a>
+            <a href="#" th:href="@{/types}" class="active m-item item m-mobile-hide"><i class="clone outline icon"></i>分类管理</a>
             <a href="#" th:href="@{/admin/friendlinks}" class="m-item item m-mobile-hide"><i class="pencil alternate icon"></i>友链管理</a>
-            <a href="#" th:href="@{/admin/pictures}" class="m-item item m-mobile-hide"><i class="image icon"></i>标签管理</a>
+            <a href="#" th:href="@{/tagmain}" class="m-item item m-mobile-hide"><i class="image icon"></i>标签管理</a>
             <div class="right m-item m-mobile-hide menu">
                 <div class="ui dropdown  item">
                     <div class="text">
@@ -44,8 +44,8 @@
     <div class="ui attached pointing menu">
         <div class="ui container">
             <div class="right menu">
-                <a href="#" th:href="@{/admin/types/input}" class="teal active item">新增</a>
-                <a href="#" th:href="@{/admin/Tag/TagList}" class="item">列表</a>
+                <a href="#" th:href="@{/tagmain}" class="teal active item">新增</a>
+                <a href="#" th:href="@{/selectAll}" class="item">列表</a>
             </div>
         </div>
     </div>
@@ -71,15 +71,16 @@
                 <td th:text="${iterStat.count}">1</td>
                 <td th:text="${Tag.name}">我的故事</td>
                 <td>
-                    <a href="#" th:href="@{/gettype/}+${Tag.id}" class="ui mini teal basic button">编辑</a>
-                    <a href="#" th:href="@{/delete/}+${Tag.id}"  onclick="return confirm('确定要删除该分类吗？三思啊! 删了可就没了！')" class="ui mini red basic button">删除</a>
+
+                    <a href="#" th:href="@{/deleteTag/}+${Tag.id}"  onclick="return confirm('确定要删除该分类吗？三思啊! 删了可就没了！')" class="ui mini red basic button">删除</a>
                 </td>
             </tr>
             </tbody>
-            <a href="#" th:href="@{/addtype}">
-                <button type="button" class="ui teal button m-mobile-wide m-margin-top"><i class="pencil icon"></i>新增</button>
+            <a href="#" th:href="@{/AddTag}">
+                <button type="button" class="ui teal button m-mobile-wide m-margin-top" style="    position: relative;top: -29px;"><i class="pencil icon"></i>新增</button>
             </a>
         </table>
+        <h1></h1>
     </div>
 </div>
 

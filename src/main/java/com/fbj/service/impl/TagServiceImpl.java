@@ -15,13 +15,31 @@ public class TagServiceImpl implements TagService {
     TagDao tagDao;
     @Transactional
     @Override
+    //添加标签
     public Tag saveTag(Tag tag) {
         return tagDao.save(tag);
     }
-
-
+    //查询所有
     @Override
     public Page<Tag> listTag(Pageable pageable) {
         return tagDao.findAll(pageable);
+    }
+    //删除标签
+    @Transactional
+    @Override
+    public void deleteTag(long id) {
+        tagDao.deleteById(id);
+    }
+    //修改
+
+    @Override
+    public Tag updateType(Tag tag) {
+        return tagDao.save(tag);
+    }
+    //获得内容
+
+    @Override
+    public Tag getType(long id) {
+        return tagDao.getById(id);
     }
 }

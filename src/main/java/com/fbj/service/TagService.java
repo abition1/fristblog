@@ -12,4 +12,10 @@ public interface TagService {
     Tag saveTag(Tag tag);
     //查询全部
     Page<Tag> listTag(Pageable pageable);
+    //删除标签
+    void  deleteTag(long id);
+    //更改
+    Tag  updateType(Tag tag); //更新
+    //
+    Tag  getType(long id);  //通过id来获得它的内容
 }
