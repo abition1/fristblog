@@ -8,10 +8,12 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.security.PublicKey;
 
@@ -41,9 +43,21 @@ public class TypeController {
     }
 
     @PostMapping("/addtypes")
-public  String  addtypes(Type type){
-
-     typeService.saveType(type);
+public  String  addtypes(Type type, RedirectAttributes redirectAttributes, BindingResult result, Model model){
+    Type type1=  typeService.getTypeByName(type.getName());
+    if (type1!=null){
+result.rejectValue("name","nameError","不能添加重复的类");
+    }
+    if(result.hasErrors()){
+        model.addAttribute("errormessage","该分类已经存在");
+  return "admin/addtype";
+    }
+   Type type2=   typeService.saveType(type);
+    if (type2==null){
+        redirectAttributes.addFlashAttribute("message","新增失败");
+    }else {
+        redirectAttributes.addFlashAttribute("message","新增成功");
+    }
      return  "redirect:/types";
     }
    @GetMapping("/gettype/{id}")
@@ -52,9 +66,17 @@ public  String  addtypes(Type type){
       model.addAttribute("infos",type);
       return "admin/updatetype";
    }
-   @PostMapping("/update")
-    public String update(Type type){
-     typeService.saveType(type);
+   @RequestMapping("/update")
+    public String update(Type type,BindingResult result,Model model){
+       Type type2=  typeService.saveType(type);
+       Type type1=typeService.getTypeByName(type2.getName());
+       if (type1!=null){
+           result.rejectValue("name1","nameError2","不能添加重复的类");
+       }
+       if(result.hasErrors()){
+           model.addAttribute("uperrormessage","该分类名已经存在");
+           return "redirect:/types";
+       }
 return "redirect:/types";
    }
 

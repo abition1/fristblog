@@ -31,7 +31,7 @@ public class TagController {
     @RequestMapping("/tagmain")
     public String main_tag(){
         System.out.println("标签主页面");
-        return "admin/Tag/main";
+        return "admin/Tag/TagList";
     }
     /**
      * 添加标签方法

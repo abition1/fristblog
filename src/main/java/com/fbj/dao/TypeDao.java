@@ -10,6 +10,7 @@ public interface TypeDao extends JpaRepository<Type,Long> {
 
 
     //@Query("update AdminUser set username=:#{#adminUser.username},password=:#{#adminUser.password} where id=:#{#adminUser.id}")
-
+   @Query(nativeQuery = true,value = "select * from t_type where name = ?")
+    Type  getTypeByName(String name);
 
 }

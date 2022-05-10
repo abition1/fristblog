@@ -20,4 +20,5 @@ Page<Type>  listType(Pageable pageable); //分页查询
 
  List<Type>  getAllType(); //获得所有type，给blog分类查询使用
 
+ Type  getTypeByName(String name);
 }

@@ -18,7 +18,7 @@
         <a href="#" th:href="@{/blogs}" class="active m-item item m-mobile-hide"><i class="home icon"></i>文章管理</a>
         <a href="#" th:href="@{/types}" class=" m-item item m-mobile-hide"><i class="clone outline icon"></i>分类管理</a>
         <a href="#" th:href="@{/admin/friendlinks}" class=" m-item item m-mobile-hide"><i class="pencil alternate icon"></i>友链管理</a>
-        <a href="#" th:href="@{/admin/pictures}" class=" m-item item m-mobile-hide"><i class="image icon"></i>相册管理</a>
+        <a href="#" th:href="@{/selectAll}" class="m-item item m-mobile-hide"><i class="image icon"></i>标签管理</a>
         <div class="right m-item m-mobile-hide menu">
           <div class="ui dropdown  item">
             <div class="text">
@@ -75,19 +75,20 @@
             </div>
 
           </div>
-          <!--<div class="field">-->
-            <!--<div class="ui checkbox">-->
-              <!--<input type="checkbox" id="recommend" name="recommend">-->
-              <!--<label for="recommend">推荐</label>-->
-            <!--</div>-->
-          <!--</div>-->
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" id="recommend" name="recommend">
+              <label for="recommend">推荐</label>
+            </div>
+          </div>
           <div class="field">
             <button  type="button" id="search-btn" class="ui mini teal basic button"><i class="search icon"></i>搜索</button>
           </div>
         </div>
       </div>
       <div id="table-container">
-        <table th:fragment="blogList" class="ui compact teal table">
+        <table  class="ui compact teal table">
+
           <thead>
           <tr align="center">
             <th>ID</th>
@@ -99,7 +100,7 @@
             <th>操作</th>
           </tr>
           </thead>
-          <tbody>
+          <tbody th:fragment="blogList">
           <tr align="center" th:each="blog,iterStat : ${blogs}">
             <td th:text="${iterStat.count}">1</td>
             <td th:text="${blog.title}">大圣，此去欲何?</td>
@@ -109,19 +110,34 @@
             <td th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd HH:mm')}">2020-01-02 05:20</td>
             <td>
               <!--th:href="@{/admin/types/{id}/input(id=${type.id})}"-->
-              <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui mini teal basic button">编辑</a>
-              <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" onclick="return confirm('确定要删除该文章吗？三思啊! 删了可就没了！')" class="ui mini red basic button">删除</a>
+              <a href="#" th:href="@{/getblog/}+${blog.id}" class="ui mini teal basic button">编辑</a>
+              <a href="#" th:href="@{/deleteblog/}+${blog.id}"  onclick="return confirm('确定要删除该分类吗？三思啊! 删了可就没了！')" class="ui mini red basic button">删除</a>
             </td>
           </tr>
           <tr>
             <th colspan="7">
-              <div class="ui inverted divided stackable grid">
+             <!-- <div class="ui inverted divided stackable grid">
+              <a onclick="page(this)" th:attr="data-page=${page.number}-1" class="item" th:unless="${page.first}">上一页</a>
+
+              <a onclick="page(this)" th:attr="data-page=${page.number}+1" class="item" th:unless="${page.last}">下一页</a>
+
+              &lt;!&ndash;a onclick="page(this)" th:attr="data-page=${page.number}-1" class="item" th:unless="${page.first}">上一页</a>
+              <a onclick="page(this)" th:attr="data-page=${page.number}+1" class=" item" th:unless="${page.last}">下一页</a>&ndash;&gt;
+
+            </div>-->
+              <div class="ui mini pagination menu"  >
                 <div class="three wide column" align="center">
-                  <a class="item" th:href="@{/blogs(page=${blogs.number}-1)}">上一页</a>
+                <a onclick="page(this)" th:attr="data-page=${page.number}-1" class="item" >上一页</a>
                 </div>
-                <div class="three wide column" align="center">
-                  <a class="item" th:href="@{/blogs(page=${blogs.number}+1)}" >下一页</a>
-                </div>
+                  <div class="three wide column" align="center">
+
+                <a onclick="page(this)" th:attr="data-page=${page.number}+1"class=" item" >下一页</a>
+                  </div>
+              </div>
+              <div align="center">
+                <a href="#" th:href="@{/addblog}">
+                  <button type="button" class="ui teal button m-mobile-wide m-margin-top"><i class="pencil icon"></i>新增</button>
+                </a>
               </div>
             </th>
           </tr>
@@ -300,9 +316,10 @@
       loaddata();
     });
     function loaddata() {
-      $("#table-container").load(/*[[@{/admin/blogs/search}]]*/"/admin/blogs/search",{
+      $("#table-container").load(/*[[@{/admin/blogs/search}]]*/"/search",{
         title : $("[name='title']").val(),
         typeId : $("[name='typeId']").val(),
+        recommend : $("[name='recommend']").prop('checked'),
         page : $("[name='page']").val()
       });
     }

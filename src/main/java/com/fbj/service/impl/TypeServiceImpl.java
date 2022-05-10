@@ -46,4 +46,9 @@ public class TypeServiceImpl implements TypeService {
     public List<Type> getAllType() {
         return typeDao.findAll();
     }
+
+    @Override
+    public Type getTypeByName(String name) {
+        return typeDao.getTypeByName(name);
+    }
 }

@@ -6,6 +6,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface TagService {
     //添加标签
@@ -18,4 +20,6 @@ public interface TagService {
     Tag  updateType(Tag tag); //更新
     //id.。.
     Tag  getType(long id);  //通过id来获得它的内容
+
+    List<Tag>  getAllTag(); //提供给blog
 }
