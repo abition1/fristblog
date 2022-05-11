@@ -30,8 +30,7 @@ public class BlogController {
     TagService tagService;
     @RequestMapping("/blogs")
 //通过@PageableDeafault来对分页数据的控制
-    public String  Pagelist(@PageableDefault(size = 3,sort = "updateTime",direction = Sort.Direction.DESC) Pageable pageable, Model model, BlogQuery blog){
-        model.addAttribute("blogs",blogService.listBlog(pageable,blog));
+    public String  Pagelist(@PageableDefault(size = 5,sort = "updateTime",direction = Sort.Direction.DESC) Pageable pageable, Model model, BlogQuery blog){
         model.addAttribute("page",blogService.listBlogS(pageable));
       List<Type> list= typeService.getAllType();
       model.addAttribute("type",list);
@@ -39,7 +38,7 @@ public class BlogController {
     }
 
     @PostMapping("/search")
-    public String search(@PageableDefault(size = 3, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
+    public String search(@PageableDefault(size = 5, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
                          BlogQuery blog, Model model) {
         model.addAttribute("page",blogService.listBlog(pageable, blog));
         return "admin/blogs :: blogList";

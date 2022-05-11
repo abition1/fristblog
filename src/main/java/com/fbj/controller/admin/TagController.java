@@ -46,7 +46,7 @@ public class TagController {
      * 查询全部
      */
     @RequestMapping("/selectAll")
-    public String selectAll(@PageableDefault(size = 10,sort = "id",direction = Sort.Direction.DESC) Pageable pageable, Model model){
+    public String selectAll(@PageableDefault(size = 5,sort = "id",direction = Sort.Direction.DESC) Pageable pageable, Model model){
         model.addAttribute("tag",service.listTag(pageable));
         return "admin/Tag/TagList";
     }
@@ -62,10 +62,13 @@ public class TagController {
      * 列表里的增加
      */
     @RequestMapping("/List_addtag")
-    public String ListaddTag(Tag tag){
+    public String ListaddTag(Tag tag,Model model){
+      Tag  tag1=service.getTagName(tag.getName());
+      if (tag1!=null){
+          model.addAttribute("tagmessage","该标签名已经存在");
+          return  "admin/Tag/AddTag";
+      }
         service.saveTag(tag);
-        System.out.println("在这1.。。");
-
         return "redirect:/selectAll";
     }
     @RequestMapping("/AddTag")
@@ -78,11 +81,17 @@ public class TagController {
     /**
      * 编辑/
      */
-    @RequestMapping("/getTag/{id}")
+    @RequestMapping("/gettag/{id}")
     public String getTap(@PathVariable Long id,Model model){
         Tag tag=service.getType(id);
         model.addAttribute("TagInfo",tag);
 
-        return "admin/demo";
+        return "admin/Tag/updateTag";
+    }
+
+    @RequestMapping("/updatetag")
+    public String  updateTag(Tag  tag){
+        service.saveTag(tag);
+        return "redirect:/selectAll";
     }
 }

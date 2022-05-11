@@ -22,4 +22,6 @@ public interface TagService {
     Tag  getType(long id);  //通过id来获得它的内容
 
     List<Tag>  getAllTag(); //提供给blog
+
+    Tag   getTagName(String name); //通过姓名非空校验
 }
