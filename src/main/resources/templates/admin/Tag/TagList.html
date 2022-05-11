@@ -71,17 +71,31 @@
                 <td th:text="${iterStat.count}">1</td>
                 <td th:text="${Tag.name}">我的故事</td>
                 <td>
-
+                    <a href="#" th:href="@{/gettag/}+${Tag.id}" class="ui mini teal basic button">编辑</a>
                     <a href="#" th:href="@{/deleteTag/}+${Tag.id}"  onclick="return confirm('确定要删除该分类吗？三思啊! 删了可就没了！')" class="ui mini red basic button">删除</a>
                 </td>
             </tr>
+            <tr>
+                <th colspan="7">
+                    <div class="ui inverted divided stackable grid">
+                        <div class="three wide column" align="center">
+                            <a class="item" th:href="@{/selectAll(page=${tag.number}-1)}">上一页</a>
+                        </div>
+                        <div class="three wide column" align="center">
+                            <a class="item" th:href="@{/selectAll(page=${tag.number}+1)}" >下一页</a>
+                        </div>
+                    </div>
+                    <div align="center">
+                        <a href="#" th:href="@{/AddTag}">
+                            <button type="button" class="ui teal button m-mobile-wide m-margin-top" style="    position: relative;top: -29px;"><i class="pencil icon"></i>新增</button>
+                        </a>
+                    </div>
+                </th>
+            </tr>
             </tbody>
-            <a href="#" th:href="@{/AddTag}">
-                <button type="button" class="ui teal button m-mobile-wide m-margin-top" style="    position: relative;top: -29px;"><i class="pencil icon"></i>新增</button>
-            </a>
-            <a href="#" th:href="">
-            <button type="button" class="ui teal button m-mobile-wide m-margin-top" style="    position: relative;top: -29px;"><i class="pencil icon"></i>编辑</button>
-            </a>
+
+
+
         </table>
         <h1></h1>
     </div>

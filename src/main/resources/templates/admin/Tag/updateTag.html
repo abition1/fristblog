@@ -54,19 +54,19 @@
   <!--中间内容-->
   <div  class="m-container-small m-padded-tb-massive">
     <div class="ui container">
-      <form action="#" method="post" th:action="@{/List_addtag}" class="ui form">
-
+      <form action="#" method="post" th:action="@{/updatetag}" class="ui form">
+        <input type="hidden" name="id" th:value="${TagInfo.getId()}">
         <div class=" field">
           <div class="ui left labeled input">
             <label class="ui teal basic label">名称</label>
-            <input type="text" name="name" placeholder="分类名称" >
+            <input type="text" name="name" placeholder="分类名称" th:value="${TagInfo.getName()}" >
           </div>
         </div>
         <div class="ui error message"></div>
-        <div class="ui mini negative message" th:unless="${#strings.isEmpty(tagmessage)}" th:text="|提示： ${tagmessage}">提示：不能添加重复的分类</div>
+        <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="|提示： ${message}">提示：不能添加重复的标签</div>
         <div class="ui right aligned container">
           <button type="button" class="ui button" onclick="window.history.go(-1)" >返回</button>
-          <button class="ui teal submit button">提交</button>
+          <button class="ui teal submit button">修改</button>
         </div>
       </form>
     </div>
