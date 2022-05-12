@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import until.BlogQuery;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -57,9 +58,13 @@ public class BlogController {
 
     @PostMapping("/saveblog")
     public String saveBlog(Blog blog,Model model){
-
-     Blog blog1=  blogService.saveBlog(blog);
-       if(blog1==null){
+        Blog blog1= blogService.getBlogByName(blog.getTitle());
+        if(blog1!=null){
+            model.addAttribute("blogmessage","该博客标题已经存在");
+            return "admin/addblog";
+        }
+     Blog blog2=  blogService.saveBlog(blog);
+       if(blog2==null){
            model.addAttribute("error","内容为空不能保存");
        }
 
@@ -86,9 +91,10 @@ public class BlogController {
      return "admin/updateblog";
 }
 
-@RequestMapping("/saveblog")
+@RequestMapping("/saveblogs")
 public String saveBlog(Blog blog){
+
  blogService.saveBlog(blog);
-        return "admin/blogs";
+        return "redirect:/blogs";
 }
 }

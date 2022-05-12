@@ -18,4 +18,6 @@ public interface BlogService {
      List<Blog> queryAllBlog();
     Blog  getBlog(Long id);
      Page<Blog>  listBlogS(Pageable pageable);
+
+     Blog  getBlogByName(String title);
 }

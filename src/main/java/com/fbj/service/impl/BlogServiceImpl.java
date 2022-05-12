@@ -80,5 +80,10 @@ public class BlogServiceImpl  implements BlogService {
         return  blogDao.findAll(pageable);
     }
 
+    @Override
+    public Blog getBlogByName(String title) {
+        return blogDao.getBlogByName(title);
+    }
+
 
 }
