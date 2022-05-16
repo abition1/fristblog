@@ -10,17 +10,36 @@ layui.use(['element', 'jquery', 'form', 'layedit', 'flow'], function () {
         height: 150,
         tool: ['face', '|', 'link'],
     });
-    //留言的编辑器的验证
+    //留言的编辑器和姓名校验
     form.verify({
         content: function (value) {
+            var name=$('#nickname').val();
+            var email=$('#email').val();
+            var judge='@qq.com';
             value = $.trim(layedit.getContent(editIndex));
-            if (value == "") return "请输入内容";
+
+            if (value == ""&&name=="") {
+                return "姓名和留言不能为空！！！";
+            }else if(name ==""&&value!=""){
+                return "姓名不能为空!!!"
+            }else if (name !=""&&value=="") {
+                return "请输入评论内容"
+            }else {
+                var i=email.indexOf(judge);
+                //alert(i);
+                if(i==-1){
+                 return   "邮箱不正确"
+                }
+            }
             layedit.sync(editIndex);
         },
         replyContent: function (value) {
             if (value == "") return "请输入内容";
         }
     });
+
+
+
     //回复按钮点击事件
     $('#message-list').on('click', '.btn-reply', function () {
          var targetId = $(this).data('targetid')
