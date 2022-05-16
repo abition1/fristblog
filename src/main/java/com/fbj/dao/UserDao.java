@@ -9,4 +9,7 @@ import org.springframework.stereotype.Repository;
 public interface UserDao extends JpaRepository<User,Long> {
     @Query(nativeQuery = true,value = "select * from t_user where username = ?")
 User findByUsername(String username);
+
+    @Query(nativeQuery = true,value = "select * from t_user ")
+    User findAllUser();
 }

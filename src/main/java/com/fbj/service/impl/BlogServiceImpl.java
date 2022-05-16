@@ -81,8 +81,23 @@ public class BlogServiceImpl  implements BlogService {
     }
 
     @Override
+    public Blog queryAllsBlog() {
+        return blogDao.queryAllsBlog();
+    }
+
+    @Override
     public Blog getBlogByName(String title) {
         return blogDao.getBlogByName(title);
+    }
+
+    @Override
+    public List<Blog> queryBlog(String query) {
+        return blogDao.queryBlog(query);
+    }
+
+    @Override
+    public List<Blog> queryMyBlog(Long type_id) {
+        return blogDao.queryMyBlog(type_id);
     }
 
 

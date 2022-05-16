@@ -3,9 +3,11 @@ package com.fbj.controller.admin;
 import com.fbj.pojo.Blog;
 import com.fbj.pojo.Tag;
 import com.fbj.pojo.Type;
+import com.fbj.pojo.User;
 import com.fbj.service.BlogService;
 import com.fbj.service.TagService;
 import com.fbj.service.TypeService;
+import com.fbj.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -16,7 +18,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import until.BlogQuery;
-
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
@@ -26,7 +27,8 @@ public class BlogController {
     BlogService blogService;
 @Autowired
     TypeService typeService;
-
+@Autowired
+    UserService userService;
 @Autowired
     TagService tagService;
     @RequestMapping("/blogs")
@@ -50,8 +52,10 @@ public class BlogController {
         model.addAttribute("blog",new Blog());
         List<Type> list= typeService.getAllType();
         List<Tag>  list1=tagService.getAllTag();
+//        User allUser = userService.findAllUser();
         model.addAttribute("types",list);
         model.addAttribute("tags",list1);
+//        model.addAttribute("users",allUser);
         return  "admin/addblog";
 
     }

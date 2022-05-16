@@ -1,11 +1,4 @@
-﻿.header{
-	margin: 0 auto;
-	width: 100%;
-	height: 100%;
-	background-color: #2E2E2E;
-	position: fixed!important;
-	background-size: 100% 100%
-}
+﻿.header{margin:0 auto;width:100%;height:100%;background-color:#000;position:fixed!important;background-image:url(https://yssimage.oss-cn-hangzhou.aliyuncs.com/bg9.jpg);background-size:100% 100%}
 *{margin:0;padding:0}
 a,img{text-decoration:none;border:none}
 button,input,textarea{outline:0;border:none;font:14px/1.5 "Microsoft YaHei","微软雅黑","Helvetica Neue","Hiragino Sans GB",Helvetica,Tahoma,sans-serif;color:#515250}
@@ -50,7 +43,6 @@ body,html{background-color:rgba(255,255,255,.5);font:14px/1.5 "Helvetica neue",H
 @keyframes zoomIn{0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}
 50%{opacity:1}
 }
-
 @-webkit-keyframes spin{0%{-webkit-transform:rotate(0)}
 100%{-webkit-transform:rotate(359deg)}
 }

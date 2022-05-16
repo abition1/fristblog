@@ -18,6 +18,9 @@ public interface BlogService {
      List<Blog> queryAllBlog();
     Blog  getBlog(Long id);
      Page<Blog>  listBlogS(Pageable pageable);
-
+     Blog   queryAllsBlog();
      Blog  getBlogByName(String title);
+    List<Blog> queryBlog(String query);
+    List<Blog> queryMyBlog(Long type_id);
+
 }

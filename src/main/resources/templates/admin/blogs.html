@@ -100,7 +100,8 @@
             <th>操作</th>
           </tr>
           </thead>
-          <tbody >
+          <tbody>
+
           <tr align="center" th:each="blog,iterStat : ${page.content}">
             <td th:text="${iterStat.count}">1</td>
             <td th:text="${blog.title}">大圣，此去欲何?</td>
@@ -125,7 +126,7 @@
               <a onclick="page(this)" th:attr="data-page=${page.number}+1" class=" item" th:unless="${page.last}">下一页</a>&ndash;&gt;
 
             </div>-->
-              <div class="ui mini pagination menu"  >
+              <div class="ui mini pagination menu"   >
                 <div class="three wide column" align="center">
                   <a class="item" th:href="@{/blogs(page=${page.number}-1)}">上一页</a>
                 </div>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="www.lzqcode.com" />
+    <meta name="robots" content="all" />
+    <title>我的博客</title>
+    <link rel="stylesheet" th:href="@{/bloglayui/font-awesome/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{/bloglayui/layui/css/layui.css}" />
+    <link rel="stylesheet" th:href="@{/bloglayui/css/master.css}" />
+    <link rel="stylesheet" th:href="@{/bloglayui/css/gloable.css}" />
+    <link rel="stylesheet" th:href="@{/bloglayui/css/nprogress.css}" />
+    <link rel="stylesheet" th:href="@{/bloglayui/css/blog.css}" />
+</head>
+<body>
+    <div class="header">
+    </div>
+    <header class="gird-header">
+        <div class="header-fixed">
+            <div class="header-inner">
+                <a href="javascript:void(0)" class="header-logo" id="logo">Mr.fengbujue</a>
+                <nav class="nav" id="nav">
+                    <ul>
+                        <li><a th:href="@{/bloglogin}">首页</a></li>
+                        <li><a th:href="@{/article}">博客</a></li>
+						<li><a th:href="@{/blogtag}">标签</a></li>
+						<li><a th:href="@{/blogmessage}">留言</a></li>
+                        <li><a href="../link.html">友链</a></li>
+                    </ul>
+                </nav>
+                <a class="phone-menu">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="doc-container" id="doc-container">
+        <div class="container-fixed">
+		    <div class="col-content">
+		        <div class="inner">
+		            <article class="article-list  bloglist" id="LAY_bloglist" >
+						<section class="article-item zoomIn article" th:each="blog : ${myblog}">
+							<div class="fc-flag" >置顶</div>
+							<h5 class="title">       
+								<span class="fc-blue"  th:text="${blog.flag}">【原创】</span>
+								<a href="read.html" th:text="${blog.title}">Java学习路线推荐</a>
+							</h5>   
+							<div class="time">       
+								<span class="day">1</span>       
+								<span class="month fs-18">7<span class="fs-14">月</span></span>       
+								<span class="year fs-18 ml10">2020</span>   
+							</div>   
+							<div class="content">       
+								<a th:href="@{/read/}+${blog.id}" class="cover img-light">
+									<img th:src="@{${blog.firstPicture}}">
+								</a>
+								<div th:text="${blog.description}"></div>
+							</div>   
+							<div class="read-more">       
+								<a  th:href="@{/read/}+${blog.id}" class="fc-black f-fwb">继续阅读</a>
+							</div>    
+							<aside class="f-oh footer">       
+								<div class="f-fl tags">           
+									<span class="fa fa-tags fs-16"></span>           
+									<a class="tag" th:text="${blog.getType().getName()}">java路线</a>
+								</div>       
+								<div class="f-fr">           
+									<span class="read">               
+										<i class="fa fa-eye fs-16"></i>               
+										<i class="num">213</i>           
+									</span>           
+									<span class="ml20">               
+										<i class="fa fa-comments fs-16"></i>               
+										<a href="javascript:void(0)" class="num fc-grey">1</a>           
+									</span>       
+								</div>   
+							</aside>
+						</section>
+
+		            </article>
+		        </div>
+		    </div>
+		    <div class="col-other">
+		        <div class="inner">
+					<div class="other-item" id="categoryandsearch">
+			    		<div class="search">
+					        <label class="search-wrap">
+								<form name="search" th:action="@{/blogsearch}">
+					            <input type="text" id="search" name="query" placeholder="输入关键字搜索" />
+					            <span class="search-icon">
+					                <i class="fa fa-search" onclick="document.forms['search'].submit()"></i>
+					            </span>
+								</form>
+								<!--<form name="search" action="#" th:action="@{/blogsearch}" method="get" target="_blank">
+									<div class="ui icon transparent input m-margin-tb-tiny" style="color: white">
+										<input style="color: white" type="text" name="query" placeholder="Search...." th:value="${query}">
+										<i class="fa fa-search" onclick="document.forms['search'].submit()" ></i>
+									</div>
+								</form>-->
+					        </label>
+			        		<ul class="search-result"></ul>
+			    		</div>
+						<ul class="category mt20" id="category"  th:each="type : ${mytype}">
+							<li data-index="2"><a th:href="@{/article/}+${type.id}" th:text="${type.getName()}" >go</a></li>
+						</ul>
+					</div>
+					<!--右边悬浮 平板或手机设备显示-->
+					<div class="category-toggle"><i class="layui-icon">&#xe603;</i></div>
+					<div class="article-category">
+					    <div class="article-category-title">分类导航</div>
+					            <a href="/Blog/Article/1/">Java</a>
+					            <a href="/Blog/Article/2/">前端</a>
+					            <a href="/Blog/Article/3/">Python</a>
+					            <a href="/Blog/Article/4/">PHP</a>
+					            <a href="/Blog/Article/5/">其它</a>
+					    <div class="f-cb"></div>
+					</div>
+					<!--遮罩-->
+					<div class="blog-mask animated layui-hide"></div>
+					<div class="other-item">
+					    <h5 class="other-item-title">标签</h5>
+					    <div class="inner">
+					        <ul class="hot-list-article" th:each="tag:${mytag}">
+					                <li th:text="${tag.getName()}"> <a href="" >SpringBoot 入门爬虫项目实战</a></li>
+
+					        </ul>
+					    </div>
+					</div>
+					<div class="other-item">
+					    <h5 class="other-item-title">置顶推荐</h5>
+					    <div class="inner">
+					        <ul class="hot-list-article">
+					                <li> <a href="/Blog/Read/16">java学习路线</a></li>
+					                <li> <a href="/Blog/Read/14">基于SpringBoot+JWT+Redis跨域单点登录的实现</a></li>
+					                <li> <a href="/Blog/Read/9">小白轻松入门Redis</a></li>
+					        </ul>
+					    </div>
+					</div>
+
+		        </div>
+		    </div>
+		</div>
+    </div>
+    <footer class="grid-footer">
+        <div class="footer-fixed">
+            <div class="copyright">
+                <div class="info">
+                    <div class="contact">
+                        <a href="javascript:void(0)" class="github" target="_blank"><i class="fa fa-github"></i></a>
+                        <a th:href="@{https://wpa.qq.com/msgrd?v=3&uin=2977410949&site=qq&menu=yes}" target="_blank" title="2977410949"><i class="fa fa-qq" aria-hidden="true"></i></a>
+                        <a href="javascript:void(0)" class="weixin"><i class="fa fa-weixin"></i></a>
+                    </div>
+                    <p class="mt05">
+                         Copyright &copy; 2019-2020 ZQ博客 All Rights Reserved V.3.1.3 Power by ZQ博客
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script th:src="@{/bloglayui/layui/layui.js}"></script>
+    <script th:src="@{/bloglayui/js/yss/gloable.js}"></script>
+    <script th:src="@{/bloglayui/js/plugins/nprogress.js}"></script>
+    <script>NProgress.start();</script>
+ 	<script th:src="@{/bloglayui/js/yss/article.js}"></script>
+    <script> 
+        window.onload = function () {
+            NProgress.done();
+        };
+    </script>
+</body>
+</html>

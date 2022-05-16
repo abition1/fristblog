@@ -29,6 +29,7 @@ public class Blog {
     private boolean commentabled;//评论开启
     private boolean published;   //发布开启
     private boolean recommend;   //是否推荐
+    private String description;   //博客的简单描述
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;   //创建时间
     @Temporal(TemporalType.TIMESTAMP)
@@ -41,4 +42,5 @@ public class Blog {
     private User user;
     @OneToMany(mappedBy = "blog",fetch=FetchType.EAGER)
     private List<Comment> comments=new ArrayList<>();
+
 }

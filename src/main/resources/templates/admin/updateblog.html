@@ -94,6 +94,19 @@
               </div>
             </div>
           </div>
+          <div class="required field">
+            <div class="ui left labeled action input">
+              <label class="ui compact teal basic label">作者</label>
+              <div class="ui fluid selection dropdown">
+                <input type="hidden" name="user.id" th:value="*{user}">
+                <i class="dropdown icon"></i>
+                <div class="default text"  th:text="${session.user.getUsername()}"></div>
+                <div class="menu">
+                  <div class="item"  th:data-value="1" th:text="${session.user.getUsername()}"></div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class=" field">
             <div class="ui left labeled action input">
               <label class="ui compact teal basic label">标签</label>
@@ -127,9 +140,9 @@
           <!--</div>-->
         <!--</div>-->
 
-       <!-- <div class="required field">
-          <textarea name="description" th:text="*{description}" placeholder="博客描述..." maxlength="200"></textarea>
-        </div>-->
+        <div class="required field">
+          <textarea name="description"  placeholder="博客描述..." maxlength="200"  th:text="${infos.description}"></textarea>
+        </div>
 
         <div class="inline fields">
           <div class="field">
