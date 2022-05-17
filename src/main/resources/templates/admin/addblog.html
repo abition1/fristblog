@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>博文发布</title>
   <link href="../../static/images/me.jpg" th:href="@{/favicon.ico}" rel="icon" type="image/x-ico">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+  <link rel="stylesheet"  href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css">
   <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css" th:href="@{/lib/editormd/css/editormd.min.css}">
   <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
 </head>
@@ -19,7 +19,7 @@
         <h2 class="ui olive header item">管理后台</h2>
         <a href="#" th:href="@{/blogs}" class="active m-item item m-mobile-hide"><i class="home icon"></i>博文管理</a>
         <a href="#" th:href="@{/types}" class=" m-item item m-mobile-hide"><i class="clone outline icon"></i>分类管理</a>
-        <a href="#" th:href="@{/admin/friendlinks}" class=" m-item item m-mobile-hide"><i class="pencil alternate icon"></i>友链管理</a>
+        <a href="#" th:href="@{/listlink}" class="m-item item m-mobile-hide"><i class="pencil alternate icon"></i>友链管理</a>
         <a href="#" th:href="@{/selectAll0}" class="m-item item m-mobile-hide"><i class="image icon"></i>标签管理</a>
         <div class="right m-item m-mobile-hide menu">
           <div class="ui dropdown item">
@@ -108,11 +108,11 @@
             </div>
           </div>
 
-          <div class=" field">
+        <!--  <div class=" field">
             <div class="ui left labeled action input">
               <label class="ui compact teal basic label">标签</label>
               <div class="ui fluid selection dropdown">
-                <input type="hidden" name="tagIds" th:value="*{tags}" >
+                <input type="hidden" name="tag.id" th:value="*{tags}" >
                 <i class="dropdown icon"></i>
                 <div class="default text">标签</div>
                 <div class="menu">
@@ -120,6 +120,19 @@
                 </div>
               </div>
             </div>
+          </div>-->
+          <div class=" field">
+          <div class="ui left labeled action input">
+          <label class="ui compact teal basic label">标签</label>
+          <div class="ui fluid selection multiple search  dropdown">
+          <input type="hidden" name="tag.id" th:value="*{tag}" >
+          <i class="dropdown icon"></i>
+          <div class="default text">标签</div>
+          <div class="menu">
+          <div th:each="tag : ${tags}" class="item" data-value="1" th:data-value="${tag.id}" th:text="${tag.name}">java</div>
+          </div>
+          </div>
+          </div>
           </div>
 
           <div class="required field">
@@ -237,8 +250,8 @@
   </footer>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
   <script src="../../static/lib/editormd/editormd.min.js" th:src="@{/lib/editormd/editormd.min.js}"></script>
 
 

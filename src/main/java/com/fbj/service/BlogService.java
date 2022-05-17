@@ -22,5 +22,9 @@ public interface BlogService {
      Blog  getBlogByName(String title);
     List<Blog> queryBlog(String query);
     List<Blog> queryMyBlog(Long type_id);
+    int  updateBlog(Long id,int views);
+    List<Integer>  orderBySize();
+    List<String>  getTitle(int views);
+    List<Blog> queryMyBlogs(Long id);
 
 }

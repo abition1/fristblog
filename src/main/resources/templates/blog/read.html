@@ -14,10 +14,7 @@
     <link rel="stylesheet" th:href="@{/bloglayui/css/gloable.css}" />
     <link rel="stylesheet" th:href="@{/bloglayui/css/nprogress.css}" />
     <link rel="stylesheet" th:href="@{/bloglayui/css/blog.css}" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-    <!-- require MetingJS -->
-    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
 </head>
 <body>
     <div class="header">
@@ -32,7 +29,7 @@
                         <li><a th:href="@{/article}">博客</a></li>
                         <li><a th:href="@{/blogtag}">标签</a></li>
                         <li><a th:href="@{/blogmessage}">留言</a></li>
-                        <li><a href="../link.html">友链</a></li>
+                        <li><a href="bloglink.html">友链</a></li>
                     </ul>
                 </nav>
                 <a class="phone-menu">
@@ -56,7 +53,7 @@
                                     <small>
                                         作者：<a href="javascript:void(0)" target="_blank" class="fc-link" th:text="${blog.getUser().getNickname()}">小刘</a>
                                     </small>
-                                    <small class="ml10">围观群众：<i class="readcount">121</i></small>
+                                    <small class="ml10">博客浏览数 <i class="readcount" th:text="${view}">121</i></small>
                                     <small class="ml10">更新于 <label th:text="${blog.updateTime}">2020-07-1:11:20:21</label> </small>
                                 </p>
                             </aside>
@@ -155,5 +152,8 @@
             NProgress.done();
         };
     </script>
+    <link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css}">
+    <script th:src="@{https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js}"></script>
+    <script th:src="@{https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js}"></script>
 </body>
 </html>

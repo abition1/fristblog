@@ -29,7 +29,7 @@
                         <li><a th:href="@{/article}">博客</a></li>
 						<li><a th:href="@{/blogtag}">标签</a></li>
 						<li><a th:href="@{/blogmessage}">留言</a></li>
-                        <li><a href="../link.html">友链</a></li>
+                        <li><a  th:href="@{/bloglink}">友链</a></li>
                     </ul>
                 </nav>
                 <a class="phone-menu">
@@ -48,13 +48,11 @@
 						<section class="article-item zoomIn article" th:each="blog : ${myblog}">
 							<div class="fc-flag" >置顶</div>
 							<h5 class="title">       
-								<span class="fc-blue"  th:text="${blog.flag}">【原创】</span>
+
 								<a href="read.html" th:text="${blog.title}">Java学习路线推荐</a>
 							</h5>   
-							<div class="time">       
-								<span class="day">1</span>       
-								<span class="month fs-18">7<span class="fs-14">月</span></span>       
-								<span class="year fs-18 ml10">2020</span>   
+							<div class="time">
+								<span class="month fs-18" th:text="${blog.createTime}">7<span class="fs-14">月</span></span>
 							</div>   
 							<div class="content">       
 								<a th:href="@{/read/}+${blog.id}" class="cover img-light">
@@ -71,9 +69,9 @@
 									<a class="tag" th:text="${blog.getType().getName()}">java路线</a>
 								</div>       
 								<div class="f-fr">           
-									<span class="read">               
-										<i class="fa fa-eye fs-16"></i>               
-										<i class="num">213</i>           
+									<span class="read">
+										<i class="fa fa-address-book"></i>
+										<span  th:text="${blog.flag}">【原创】</span>
 									</span>           
 									<span class="ml20">               
 										<i class="fa fa-comments fs-16"></i>               
@@ -115,10 +113,10 @@
 					<div class="article-category">
 					    <div class="article-category-title">分类导航</div>
 					            <a href="/Blog/Article/1/">Java</a>
-					            <a href="/Blog/Article/2/">前端</a>
-					            <a href="/Blog/Article/3/">Python</a>
-					            <a href="/Blog/Article/4/">PHP</a>
-					            <a href="/Blog/Article/5/">其它</a>
+						<a href="/Blog/Article/2/">前端</a>
+						<a href="/Blog/Article/3/">Python</a>
+						<a href="/Blog/Article/4/">PHP</a>
+						<a href="/Blog/Article/5/">其它</a>
 					    <div class="f-cb"></div>
 					</div>
 					<!--遮罩-->
@@ -126,19 +124,18 @@
 					<div class="other-item">
 					    <h5 class="other-item-title">标签</h5>
 					    <div class="inner">
-					        <ul class="hot-list-article" th:each="tag:${mytag}">
-					                <li th:text="${tag.getName()}"> <a href="" >SpringBoot 入门爬虫项目实战</a></li>
-
-					        </ul>
+							<ul class="category mt20"   th:each="tag : ${mytag}">
+								<i class="fa fa-bookmark" aria-hidden="true"></i><a th:href="@{/articles/}+${tag.id}"  th:text="${tag.getName()}" >go</a>
+							</ul>
 					    </div>
 					</div>
 					<div class="other-item">
-					    <h5 class="other-item-title">置顶推荐</h5>
+					    <h5 class="other-item-title">热门推荐</h5>
 					    <div class="inner">
-					        <ul class="hot-list-article">
-					                <li> <a href="/Blog/Read/16">java学习路线</a></li>
-					                <li> <a href="/Blog/Read/14">基于SpringBoot+JWT+Redis跨域单点登录的实现</a></li>
-					                <li> <a href="/Blog/Read/9">小白轻松入门Redis</a></li>
+					        <ul class="hot-list-article" >
+                              <li th:text="${siez}"></li>
+								<li th:text="${siez1}"></li>
+								<li th:text="${siez2}"></li>
 					        </ul>
 					    </div>
 					</div>

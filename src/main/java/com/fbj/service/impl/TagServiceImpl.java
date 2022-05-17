@@ -56,5 +56,10 @@ public class TagServiceImpl implements TagService {
         return tagDao.getTagName(name);
     }
 
+    @Override
+    public List<Tag> queryById(Long id) {
+        return tagDao.queryById(id);
+    }
+
 
 }

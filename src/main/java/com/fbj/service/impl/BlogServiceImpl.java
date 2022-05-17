@@ -29,7 +29,6 @@ public class BlogServiceImpl  implements BlogService {
         Date date=new Date();
        blog.setCreateTime(date);
        blog.setUpdateTime(date);
-       blog.setViews(1);
         return  blogDao.save(blog);
     }
 
@@ -98,6 +97,26 @@ public class BlogServiceImpl  implements BlogService {
     @Override
     public List<Blog> queryMyBlog(Long type_id) {
         return blogDao.queryMyBlog(type_id);
+    }
+
+    @Override
+    public int updateBlog(Long id, int views) {
+        return blogDao.updateBlog(id,views);
+    }
+
+    @Override
+    public List<Integer> orderBySize() {
+        return blogDao.orderBySize();
+    }
+
+    @Override
+    public List<String> getTitle(int views) {
+        return blogDao.getTitle(views);
+    }
+
+    @Override
+    public List<Blog> queryMyBlogs(Long id) {
+        return blogDao.queryMyBlogs(id);
     }
 
 

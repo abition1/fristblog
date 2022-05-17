@@ -21,6 +21,6 @@ public class Tag {
     @GeneratedValue
     private Long id;
     private String name;
-    @ManyToMany(mappedBy = "tags")  //多对多的关系映射
+   @OneToMany(mappedBy = "tag",fetch=FetchType.EAGER)
     private List<Blog>  blogs=new ArrayList<>();
 }

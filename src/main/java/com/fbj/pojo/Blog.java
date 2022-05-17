@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name = "t_blog")
-public class Blog {
+public class Blog implements Serializable {
     @Id
     @GeneratedValue
     private Long id;
@@ -36,11 +37,14 @@ public class Blog {
     private Date updateTime;   //更新时间
     @ManyToOne   //多对一，一个类型对应多个博客
     private Type type;
-@ManyToMany(cascade = {CascadeType.PERSIST}) //级联新增  新增一个博客时，同时给他生成一个标签
-    private List<Tag> tags=new ArrayList<>();
+    @ManyToOne
+    private Tag tag;
     @ManyToOne
     private User user;
     @OneToMany(mappedBy = "blog",fetch=FetchType.EAGER)
     private List<Comment> comments=new ArrayList<>();
+
+
+
 
 }
