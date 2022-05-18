@@ -21,6 +21,6 @@ private Long id;
 private String descrip;
 private String  title;
 private String  http;
-
+private String  photo;
 
 }

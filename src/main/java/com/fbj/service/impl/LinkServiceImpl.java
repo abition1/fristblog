@@ -36,5 +36,10 @@ public class LinkServiceImpl implements LinkService {
         return linkDao.getById(id);
     }
 
+    @Override
+    public List<Link> getAllLink() {
+        return linkDao.findAll();
+    }
+
 
 }

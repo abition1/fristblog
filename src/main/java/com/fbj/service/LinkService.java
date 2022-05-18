@@ -15,4 +15,6 @@ public interface LinkService {
    void   deleteLink(Long  id);
 
    Link  getLinkType(long id);
+
+   List<Link>  getAllLink();
 }

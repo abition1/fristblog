@@ -2,11 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ab86b9a-969b-40da-b733-146601423957" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/aplayer/Aplayer.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/aplayer/Aplayer.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/aplayer/Meting.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/semantic.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/semantic.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/themes/basic/assets/fonts/icons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/themes/basic/assets/fonts/icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/themes/basic/assets/fonts/icons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/themes/basic/assets/fonts/icons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/themes/default/assets/fonts/icons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/themes/default/assets/fonts/icons.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/themes/default/assets/fonts/icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/themes/default/assets/fonts/icons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/themes/default/assets/fonts/icons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/themes/default/assets/fonts/icons.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/themes/default/assets/images/flags.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/themes/github/assets/fonts/octicons-local.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/themes/github/assets/fonts/octicons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/themes/github/assets/fonts/octicons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/themes/github/assets/fonts/octicons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/themes/material/assets/fonts/icons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/themes/material/assets/fonts/icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/themes/material/assets/fonts/icons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lnk/themes/material/assets/fonts/icons.woff" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/read.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/read.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fbj/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fbj/config/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fbj/controller/BlogLinkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fbj/controller/BlogLinkController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fbj/pojo/Link.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fbj/pojo/Link.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fbj/service/LinkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fbj/service/LinkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fbj/service/impl/LinkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fbj/service/impl/LinkServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/luk/semantic.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/luk/semantic.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/addlink.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/addlink.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/link.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/link.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/updatelink.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/updatelink.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/bloglink.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/bloglink.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +96,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/ui" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/lnk" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -76,24 +109,24 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\blog\src\main\resources\static\luk" />
-      <recent name="D:\blog\src\main\resources\static\ui" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\blog\src\main\resources\static\lnk" />
       <recent name="D:\blog\src\main\resources\static" />
-      <recent name="D:\blog\src\main\resources\templates\blog" />
-      <recent name="D:\blog\src\main\resources\static\bloglayui\font-awesome\css" />
+      <recent name="D:\blog\src\main\resources\static\ui" />
+      <recent name="D:\blog\src\main\resources\templates\admin" />
+      <recent name="D:\blog\src\main\resources\templates" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="until" />
       <recent name="com.fbj.config" />
       <recent name="com.fbj.handler" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\blog\src\main\resources\static\lnk" />
+      <recent name="D:\blog\src\main\resources\static\dist" />
+      <recent name="D:\blog\src\main\resources\static\luk" />
       <recent name="D:\blog\src\main\resources\static\ui" />
-      <recent name="D:\blog\src\main\resources\templates\admin" />
-      <recent name="D:\blog\src\main\resources\templates" />
-      <recent name="D:\blog\src\main\resources\templates\blog" />
-      <recent name="D:\blog\src\main\resources\static\bloglayui\font-awesome" />
+      <recent name="D:\blog\src\main\resources\static" />
     </key>
   </component>
   <component name="RunManager">
@@ -169,7 +202,8 @@
       <workItem from="1652713297231" duration="292000" />
       <workItem from="1652746536858" duration="20838000" />
       <workItem from="1652780585500" duration="8330000" />
-      <workItem from="1652791927382" duration="939000" />
+      <workItem from="1652791927382" duration="1059000" />
+      <workItem from="1652833010912" duration="8452000" />
     </task>
     <task id="LOCAL-00003" summary="增加了分类的功能以及具体实现">
       <created>1651722937527</created>
@@ -220,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652790918930</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="添加后端友链和前端友链功能">
+      <created>1652792960005</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1652792960006</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,18 +283,18 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="361" y="67" key="#Project_Structure/0.0.1536.816@0.0.1536.816" timestamp="1651655688479" />
-    <state x="487" y="211" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1652784644900">
+    <state x="487" y="211" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1652841245204">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="487" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.816@0.0.1536.816" timestamp="1652784644900" />
-    <state x="574" y="126" width="495" height="589" key="#com.intellij.ide.util.MemberChooser" timestamp="1652772373417">
+    <state x="487" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.816@0.0.1536.816" timestamp="1652841245204" />
+    <state x="574" y="126" width="495" height="589" key="#com.intellij.ide.util.MemberChooser" timestamp="1652835829417">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="574" y="126" width="495" height="589" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1652772373417" />
-    <state x="313" y="1" key="CommitChangelistDialog2" timestamp="1652790915939">
+    <state x="574" y="126" width="495" height="589" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1652835829417" />
+    <state x="313" y="1" key="CommitChangelistDialog2" timestamp="1652792958843">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="313" y="1" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1652790915939" />
+    <state x="313" y="1" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1652792958843" />
     <state x="147" y="64" key="DiffContextDialog" timestamp="1651656926206">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -262,38 +303,38 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="549" y="149" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1652077530727" />
-    <state width="1493" height="12" key="GridCell.Tab.0.bottom" timestamp="1652792891256">
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1652841580244">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="12" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1652792891256" />
-    <state width="1493" height="12" key="GridCell.Tab.0.center" timestamp="1652792891256">
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1652841580244" />
+    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1652841580244">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="12" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1652792891256" />
-    <state width="1493" height="12" key="GridCell.Tab.0.left" timestamp="1652792891256">
+    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1652841580244" />
+    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1652841580244">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="12" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1652792891256" />
-    <state width="1493" height="12" key="GridCell.Tab.0.right" timestamp="1652792891256">
+    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1652841580244" />
+    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1652841580244">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="12" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1652792891256" />
-    <state width="1493" height="12" key="GridCell.Tab.1.bottom" timestamp="1652792891256">
+    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1652841580244" />
+    <state width="1493" height="2" key="GridCell.Tab.1.bottom" timestamp="1652841580244">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="12" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1652792891256" />
-    <state width="1493" height="12" key="GridCell.Tab.1.center" timestamp="1652792891256">
+    <state width="1493" height="2" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1652841580244" />
+    <state width="1493" height="2" key="GridCell.Tab.1.center" timestamp="1652841580244">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="12" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1652792891256" />
-    <state width="1493" height="12" key="GridCell.Tab.1.left" timestamp="1652792891256">
+    <state width="1493" height="2" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1652841580244" />
+    <state width="1493" height="2" key="GridCell.Tab.1.left" timestamp="1652841580244">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="12" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1652792891256" />
-    <state width="1493" height="12" key="GridCell.Tab.1.right" timestamp="1652792891256">
+    <state width="1493" height="2" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1652841580244" />
+    <state width="1493" height="2" key="GridCell.Tab.1.right" timestamp="1652841580244">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="12" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1652792891256" />
+    <state width="1493" height="2" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1652841580244" />
     <state x="299" y="63" key="Maven.ArtifactSearchDialog" timestamp="1652233279368">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -306,10 +347,10 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="270" y="50" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1652235998895" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1652791004974">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1652792962173">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.816@0.0.1536.816" timestamp="1652791004974" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.816@0.0.1536.816" timestamp="1652792962173" />
     <state x="562" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1652768937938">
       <screen x="0" y="0" width="1536" height="816" />
     </state>

@@ -77,10 +77,10 @@
 		                </p>
 		                <p>
 		                    如需交换友链，可以在留言区留言<br>
-		                    名称：ZQ个人博客<br>
-		                    网址：http://lzqcode.com/<br>
-		                    图标：image/admin_img.png<br>
-		                    描述：只要朝着一个方向努力，一切都会变得得心应手
+		                    名称：疯不觉个人博客<br>
+		                    网址：http://lzqcode.com<br>
+							首图：http：//.....
+							笑望沧溟千军破， 策定乾坤算因果 。 无觉无惧轻生死， 非鬼非神似疯魔
 		                </p>
 		                <p>
 		                    申请提交后若无其它原因将在24小时内审核,如超过时间还未通过,请私信我.(各种额外因素)
@@ -89,41 +89,15 @@
 		        </article>
 		        <ul class="link-list">
 	                <li>
-	                    <div class="pd-lr-10">
+	                    <div class="pd-lr-10" th:each="all:${alllink}">
 	                        <a href="http://www.lzqcode.com" target="_blank">
-	                            <img src="image/admin_img.png">
+	                            <img th:text="${all.photo}" src="image/admin_img.png">
 	                            <h3>ZQ个人博客</h3>
 	                            <p>只要朝着一个方向努力，一切都会变得得心应手</p>
 	                        </a>
 	                    </div>
 	                </li>
-	                <li>
-	                    <div class="pd-lr-10">
-	                        <a href="http://www.lzqcode.com" target="_blank">
-	                            <img src="image/admin_img.png">
-	                            <h3>ZQ个人博客</h3>
-	                            <p>只要朝着一个方向努力，一切都会变得得心应手</p>
-	                        </a>
-	                    </div>
-	                </li>
-	               <li>
-	                    <div class="pd-lr-10">
-	                        <a href="http://www.lzqcode.com" target="_blank">
-	                            <img src="image/admin_img.png">
-	                            <h3>ZQ个人博客</h3>
-	                            <p>只要朝着一个方向努力，一切都会变得得心应手</p>
-	                        </a>
-	                    </div>
-	                </li>
-	                 <li>
-	                    <div class="pd-lr-10">
-	                        <a href="http://www.lzqcode.com" target="_blank">
-	                            <img src="image/admin_img.png">
-	                            <h3>ZQ个人博客</h3>
-	                            <p>只要朝着一个方向努力，一切都会变得得心应手</p>
-	                        </a>
-	                    </div>
-	                </li>
+
 		        </ul>
 		    </div>
 		</div>
