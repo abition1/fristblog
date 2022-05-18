@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.sql.Timestamp;
+import java.util.Date;
 
 @Controller
 public class CommentController {
@@ -23,14 +25,13 @@ public class CommentController {
         comment.setNickname(nickname);
         comment.setContent(content);
         comment.setEmail(email);
+        Date date=new Date();
+        Timestamp time=new Timestamp(date.getTime());
+        //  System.out.println(time);
+        comment.setCreateTime(time);
         service.save(comment);
-        System.out.println("zhelimian");
-        return "blog/message";
 
+        System.out.println("zhelimian");
+        return "redirect:/blogmessage";
     }
-@RequestMapping("/testcomment")
-    public  String OOO(){
-    System.out.println("你好");
-        return "blog/message";
-}
 }

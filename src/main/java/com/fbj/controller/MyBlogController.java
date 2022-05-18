@@ -1,9 +1,11 @@
 package com.fbj.controller;
 
 import com.fbj.pojo.Blog;
+import com.fbj.pojo.Comment;
 import com.fbj.pojo.Tag;
 import com.fbj.pojo.Type;
 import com.fbj.service.BlogService;
+import com.fbj.service.CommentService;
 import com.fbj.service.TagService;
 import com.fbj.service.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.thymeleaf.model.IModel;
 import until.RedisUtil;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.Collections;
 import java.util.Comparator;
@@ -31,6 +34,8 @@ private BlogService blogservice;
     private TagService tagService;
     @Autowired
    RedisTemplate redisTemplate;
+    @Autowired
+    CommentService commentService;
 @RequestMapping("/bloglogin")
     public String  blogLogin(){
 
@@ -98,11 +103,17 @@ public  String  read(Model model, @PathVariable Long id, HttpSession session){
     return "blog/read";
 }
 
-@RequestMapping("/blogmessage")
-public String blogMessage(){
-  return  "blog/message";
-}
-
+    /*
+          这里是跳转到留言的页面
+     */
+    @RequestMapping("/blogmessage")
+    public String blogMessage(HttpServletRequest request, Model model){
+        List<Comment>list= commentService.list();
+        model.addAttribute("comment_list",list);
+        //System.out.println(list.size());
+        // System.out.println("留言的地方 ！！！");
+        return  "blog/message";
+    }
 @RequestMapping("/blogsearch")
 public  String  blogSearch(String query,Model model){
     List<Blog> blogs = blogservice.queryBlog("%" + query + "%");
