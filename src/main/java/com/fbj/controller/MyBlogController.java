@@ -50,6 +50,7 @@ private BlogService blogservice;
     model.addAttribute("myblog",blogs);
     model.addAttribute("mytype",allType);
     model.addAttribute("mytag",allTag);
+    if(blogs.size()!=0){
     List<Integer> list = blogservice.orderBySize();
     Collections.reverse(list);
     List<Integer>  list1 = list.subList(0,list.size()-2);
@@ -62,6 +63,7 @@ private BlogService blogservice;
     List<String> title2 = blogservice.getTitle(list1.get(2));
     String string2 = title2.toString();
     model.addAttribute("siez2",string2);
+    }
 
     return  "blog/article";
 }
