@@ -25,11 +25,11 @@
                 <a href="javascript:void(0)" class="header-logo" id="logo">Mr.liu</a>
                 <nav class="nav" id="nav">
                     <ul>
-                        <li><a href="blogindex.html">首页</a></li>
-                        <li><a href="article.html">博客</a></li>
-                        <li><a href="message.html">留言</a></li>
-						<li><a href="../diary.html">日记</a></li>
-                        <li><a href="bloglink.html">友链</a></li>
+                        <li><a th:href="@{/bloglogin}">首页</a></li>
+                        <li><a th:href="@{/article}">博客</a></li>
+                        <li><a th:href="@{/blogtag}">标签</a></li>
+                        <li><a th:href="@{/blogmessage}">留言</a></li>
+                        <li><a  th:href="@{/bloglink}">友链</a></li>
                     </ul>
                 </nav>
                 <a href="/User/QQLogin" class="blog-user">
@@ -76,10 +76,10 @@
 		                    <i class="fa fa-check"></i>技术优先
 		                </p>
 		                <p>
-		                    如需交换友链，可以在留言区留言<br>
+		                    如需交换友链，可以在留言区留言 如下：<br>
 		                    名称：疯不觉个人博客<br>
 		                    网址：http://lzqcode.com<br>
-							首图：http：//.....
+							首图：http：//.....<br>
 							笑望沧溟千军破， 策定乾坤算因果 。 无觉无惧轻生死， 非鬼非神似疯魔
 		                </p>
 		                <p>
@@ -88,15 +88,15 @@
 		            </section>
 		        </article>
 		        <ul class="link-list">
-	                <li>
-	                    <div class="pd-lr-10" th:each="all:${alllink}">
-	                        <a href="http://www.lzqcode.com" target="_blank">
-	                            <img th:text="${all.photo}" src="image/admin_img.png">
-	                            <h3>ZQ个人博客</h3>
-	                            <p>只要朝着一个方向努力，一切都会变得得心应手</p>
-	                        </a>
-	                    </div>
-	                </li>
+                    <li th:each="all:${alllink}">
+                        <div class="pd-lr-10">
+                            <a th:href="${all.http}"   target="_blank">
+                                <img th:src="${all.photo}" src="https://www.yanshisan.cn/logo.png">
+                                <h3 th:text="${all.title}">燕十三</h3>
+                                <p th:text="${all.descrip}">燕十三·一个人的江湖</p>
+                            </a>
+                        </div>
+                    </li>
 
 		        </ul>
 		    </div>
