@@ -105,6 +105,7 @@ public  String  read(Model model, @PathVariable Long id, HttpSession session){
     return "blog/read";
 }
 
+
     /*
           这里是跳转到留言的页面
      */
@@ -124,5 +125,9 @@ model.addAttribute("query",query);
 return "blog/seachth";
 }
 
+@RequestMapping("/bianyi")
+    public String bianyi(){
 
+        return  "blog/bianyiqi";
+}
 }

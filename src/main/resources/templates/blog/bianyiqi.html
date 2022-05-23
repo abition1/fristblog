@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="www.lzqcode.com" />
+    <meta name="robots" content="all" />
+    <title>编辑器</title>
+    link th:href="@{/layui/css/layui.css}" rel="stylesheet">
+
+    <!-- 引入 layui.js -->
+
+    <link rel="stylesheet" th:href="@{/bianyi/lib/codemirror.css}">
+
+    <script th:src="@{/bianyi/lib/codemirror.js}"></script>
+    <!-- html代码高亮显示 -->
+    <script th:src="@{/bianyi/mode/xml/xml.js}"></script>
+    <script th:src="@{/bianyi/mode/css/css.js}"></script>
+    <script th:src="@{/bianyi/mode/javascript/javascript.js}"></script>
+    <!-- Java代码高亮显示 -->
+    <script th:src="@{/bianyi/mode/clike/clike.js}"></script>
+    <!-- 引入css支持主题 -->
+    <link rel="stylesheet" th:href="@{/bianyi/dracula.css}">
+    <!--支持代码折叠-->
+    <link rel="stylesheet" th:href="@{/bianyi/fold/foldgutter.css}"/>
+    <script th:src="@{/bianyi/fold/foldcode.js}"></script>
+    <script th:src="@{/bianyi/fold/foldgutter.js}"></script>
+    <script th:src="@{/bianyi/fold/brace-fold.js}"></script>
+    <script th:src="@{/bianyi/fold/comment-fold.js}"></script>
+    <link rel="stylesheet"  th:href="@{/bloglayui/font-awesome/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{/bloglayui/layui/css/layui.css}" />
+    <link rel="stylesheet" th:href="@{/bloglayui/css/master.css}" />
+    <link rel="stylesheet" th:href="@{/bloglayui/css/gloable.css}" />
+    <link rel="stylesheet" th:href="@{/bloglayui/css/nprogress.css}" />
+    <link rel="stylesheet" th:href="@{/bloglayui/css/about.css}" />
+
+</head>
+<body>
+<div class="header">
+</div>
+<header class="gird-header">
+    <div class="header-fixed">
+        <div class="header-inner">
+            <a href="javascript:void(0)" class="header-logo" id="logo">Mr.fengbujue</a>
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a th:href="@{/bloglogin}">首页</a></li>
+                    <li><a th:href="@{/article}">博客</a></li>
+                    <li><a th:href="@{/bianyi}">在线编码（java）</a></li>
+                    <li><a th:href="@{/blogmessage}">留言</a></li>
+                    <li><a  th:href="@{/bloglink}">友链</a></li>
+                </ul>
+            </nav>
+            <a href="/User/QQLogin" class="blog-user">
+                <i class="fa fa-qq"></i>
+            </a>
+            <a class="phone-menu">
+                <i></i>
+                <i></i>
+                <i></i>
+            </a>
+        </div>
+    </div>
+    <div class="layui-btn-container">
+        <button data-method="offset" data-type="auto" class="layui-btn layui-btn-normal" onclick="loadDoc()">调试</button>
+    </div>
+</header>
+
+<textarea name="code" id="code">
+    </textarea>
+
+<script>
+    //根据DOM元素的id构造出一个编辑器
+    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        mode: 'text/html',    //实现html代码高亮
+        mode: "text/x-java", //实现Java代码高亮
+        lineNumbers: true,    //显示行号
+        theme: "dracula",    //设置主题
+        lineWrapping: true,    //代码折叠
+        foldGutter: true,
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+        matchBrackets: true,    //括号匹配
+        //readOnly: true,        //只读
+
+    });
+</script>
+<script>
+</script>
+
+<script type="text/javascript" th:src="@{https://code.jquery.com/jquery-3.1.1.min.js}"></script>
+
+<!-- 引入 layui.js -->
+<script th:src="@{/layui/layui.js}"></script>
+<script>
+    editor.setSize('1700px', '1000px');
+    editor.setValue("\n\n\npublic class Main{\n \n public static void main(String[] args)\n{\n\nSystem.out.println(\"helloworld\");\n\n}\n\n}");    //给代码框赋值
+    editor.getValue();    //获取代码框的值
+    jQuery.support.cors = true;
+    $(loadDoc=function(){
+        layer = layui.layer;
+
+
+        $.ajax({
+            url:"http://localhost:8080/api/code/run",
+            contentType: "application/json;charset=UTF-8",
+            // data: JSON.stringify({"code":"public class Main{\n public static void main(String[] args){System.out.println(\"helloworld\");}}"}),
+            data:JSON.stringify({"code":editor.getValue()}),
+            type:"post",
+            dataType:"JSON",//设置服务器端响应回来的格式
+            success:function(data){
+                var string = data.replace("/\\","");
+                var msg=jQuery.parseJSON(string)
+                //alert(rs.username);
+                //   if(msg.error==0){
+                //     alert(msg.stdout);
+                //   }
+                //  else
+                //     alert(msg.stderr);
+
+                if(msg.error==0){
+
+                    layer.open({
+                        type: 1
+                        ,title: '代码执行结果' //不显示标题栏
+                        ,closeBtn: false
+                        ,area: '500px;'
+                        ,shade: 0.8 //透明度
+                        ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
+                        ,btn: [ 'ok']
+                        ,btnAlign: 'c'
+                        ,moveType: 1 //拖拽模式，0或者1
+                        ,content: msg.stdout
+
+                    });
+
+                }else{
+                    layer.open({
+                        type: 1
+                        ,title: '代码执行结果' //不显示标题栏
+                        ,closeBtn: false
+                        ,area: '500px;'
+                        ,shade: 0.8 //透明度
+                        ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
+                        ,btn: [ 'ok']
+                        ,btnAlign: 'c'
+                        ,moveType: 1 //拖拽模式，0或者1
+                        ,content: msg.stderr
+                    });
+
+                }
+
+
+
+
+            }
+        });
+
+    })
+</script>
+
+<footer class="grid-footer">
+    <div class="footer-fixed">
+        <div class="copyright">
+            <div class="info">
+                <div class="contact">
+                    <a href="javascript:void(0)" class="github" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="https://wpa.qq.com/msgrd?v=3&uin=930054439&site=qq&menu=yes" class="qq" target="_blank" title="930054439"><i class="fa fa-qq"></i></a>
+                    <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=gbiysbG0tbWyuMHw8K-i7uw" class="email" target="_blank" title="930054439@qq.com"><i class="fa fa-envelope"></i></a>
+                    <a href="javascript:void(0)" class="weixin"><i class="fa fa-weixin"></i></a>
+                </div>
+                <p class="mt05">
+                    Copyright &copy; 2021-2022 fbj博客 All Rights Reserved V.3.1.3 Power by fbj博客
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script th:src="@{/bloglayui/layui/layui.js}"></script>
+<script th:src="@{/bloglayui/js/yss/gloable.js}"></script>
+<script th:src="@{/bloglayui/js/plugins/nprogress.js}"></script>
+<script>NProgress.start();</script>
+<script th:src="@{https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js}"></script>
+<script th:src="@{/bloglayui/js/plugins/blogbenoitboucart.min.js}"></script>
+<script>
+    window.onload = function () {
+        NProgress.done();
+    };
+</script>
+</body>
+</html>

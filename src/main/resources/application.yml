@@ -1,6 +1,7 @@
 server:
   ssl:
     enabled: false
+
 spring:
   datasource:
     url: jdbc:mysql:///blog?useSSL=false
@@ -8,6 +9,7 @@ spring:
     password: root
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
+    open-in-view=false:
     database: mysql
     show-sql: true
     hibernate:
